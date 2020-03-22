@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.user-card {
+  border: 5px solid rgba(0, 0, 0, .10);
+}
+
+.user-profile-container {
+  text-align: center;
+}
+
+.user-profile-image {
+  border-radius: 50%;
+}
+
+.center-aligned {
+  text-align: center;
+}
+
+.right-aligned {
+  text-align: right;
+}
+
+html, body {
+  height: 100%;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-column-image {
+  flex: 0 0 100px;
+  width: 100px;
+}
+
+.mat-row:hover {
+  background-color: #F1F1F1;
+  cursor: pointer;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-right: 3px !important;
+  margin-left: 3px !important;
+}
+
+.user-info-button {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+}
+
+.top-buffer {
+    padding-top: 15px;
+}
+
+.bottom-buffer {
+  padding-bottom: 15px;
+}
+
+.button-container {
+  overflow: auto;
+}
+
+.button-icon {
+    padding-right: 3px;
+}
+
+p.user-info {
+    font-size: 20px;
+}
+
+.spinner-wrapper {
+  display: flex;
+}

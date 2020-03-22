@@ -1,0 +1,15 @@
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Application.deps.json
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Application.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Application.pdb
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Domain.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Persistence.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Repository.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Domain.pdb
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Persistence.pdb
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\bin\Debug\netstandard2.0\RandomUser.Repository.pdb
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\obj\Debug\netstandard2.0\RandomUser.Application.csprojAssemblyReference.cache
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\obj\Debug\netstandard2.0\RandomUser.Application.AssemblyInfoInputs.cache
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\obj\Debug\netstandard2.0\RandomUser.Application.AssemblyInfo.cs
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\obj\Debug\netstandard2.0\RandomUser.Application.csproj.CopyComplete
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\obj\Debug\netstandard2.0\RandomUser.Application.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Application\obj\Debug\netstandard2.0\RandomUser.Application.pdb

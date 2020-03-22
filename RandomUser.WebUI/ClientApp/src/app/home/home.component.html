@@ -1,0 +1,74 @@
+
+<app-loading-snipper *ngIf="!userModel"></app-loading-snipper>
+
+<div *ngIf="userModel" class="user-card top-buffer">
+  <div class="container-fluid top-buffer">
+
+    <div class="clearfix">
+      <div class="float-left">
+        <h2 id="tableLabel" class="">Random User</h2>
+      </div>
+      <div class="float-right">
+        <a mat-flat-button>
+          <fa-icon [icon]="faSyncAlt" size="lg" class="button-icon" (click)="getRandom()"></fa-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="user-profile-container top-buffer">
+      <img class="user-profile-image" src="data:image/jpg;base64,{{userModel.profileImageData}}" />
+      <div class="top-buffer">{{ userModel.userId }}</div>
+    </div>
+
+    <hr />
+
+    <div style="text-align: center">
+      <div *ngIf="nameVisible">
+        <p class="user-info">
+          Hi, I am <br />
+          <strong>{{ userModel.fullName }}</strong>
+        </p>
+      </div>
+
+      <div *ngIf="phoneVisible">
+        <p class="user-info">
+          My phone number is <br />
+          <strong>{{ userModel.phoneNumber }}</strong>
+        </p>
+      </div>
+
+      <div *ngIf="dobVisible">
+        <p class="user-info">
+          My date of birth is <br />
+          <strong>{{ userModel.dateOfBirthPretty }}</strong>
+        </p>
+      </div>
+
+    </div>
+
+    <div style="text-align: center" class="top-buffer">
+      <a mat-flat-button>
+        <fa-icon [icon]="faUser" size="3x" class="user-info-button" (mouseover)="onMouseoverName()"></fa-icon>
+      </a>
+
+      <a mat-flat-button>
+        <fa-icon [icon]="faPhone" size="3x" class="user-info-button" (mouseover)="onMouseoverPhone()"></fa-icon>
+      </a>
+
+      <a mat-flat-button>
+        <fa-icon [icon]="faCalendar" size="3x" class="user-info-button" (mouseover)="onMouseoverDob()"></fa-icon>
+      </a>
+    </div>
+
+    <div class="button-container top-buffer bottom-buffer">
+
+      <div class="float-right">
+        <button mat-raised-button color="primary" routerLink="/user-detail/{{userModel.userId}}">
+          <fa-icon [icon]="faPencilAlt" class="button-icon"></fa-icon>
+          Edit
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

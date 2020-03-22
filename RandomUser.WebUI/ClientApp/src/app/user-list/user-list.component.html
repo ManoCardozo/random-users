@@ -1,0 +1,39 @@
+
+<app-loading-snipper *ngIf="!users"></app-loading-snipper>
+
+<div *ngIf="users">
+  <h2 id="tableLabel">Users</h2>
+
+  <mat-table [dataSource]="users">
+    <!-- Image Definition -->
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <img src="data:image/jpg;base64,{{row.profileThumbnailData}}" />
+      </mat-cell>
+    </ng-container>
+
+    <!-- User Name Definition -->
+    <ng-container matColumnDef="user">
+      <mat-header-cell *matHeaderCellDef> User </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.fullName}} </mat-cell>
+    </ng-container>
+
+    <!-- Date of Birth Definition -->
+    <ng-container matColumnDef="dateOfBirth">
+      <mat-header-cell *matHeaderCellDef> Date of Birth </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.dateOfBirthPretty}} </mat-cell>
+    </ng-container>
+
+    <!-- Phone Definition -->
+    <ng-container matColumnDef="phoneNumber">
+      <mat-header-cell *matHeaderCellDef> Phone Number </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.phoneNumber}} </mat-cell>
+    </ng-container>
+
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="['image', 'user', 'dateOfBirth', 'phoneNumber']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['image', 'user', 'dateOfBirth', 'phoneNumber']" routerLink="/user-detail/{{row.userId}}"></mat-row>
+  </mat-table>
+</div>
+

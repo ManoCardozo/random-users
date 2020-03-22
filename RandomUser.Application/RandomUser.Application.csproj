@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LINQKit.Core" Version="1.1.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RandomUser.Domain\RandomUser.Domain.csproj" />
+    <ProjectReference Include="..\RandomUser.Persistence\RandomUser.Persistence.csproj" />
+    <ProjectReference Include="..\RandomUser.Repository\RandomUser.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

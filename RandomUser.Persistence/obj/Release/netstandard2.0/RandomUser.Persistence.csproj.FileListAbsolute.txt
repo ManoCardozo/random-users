@@ -1,0 +1,11 @@
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\bin\Release\netstandard2.0\RandomUser.Persistence.deps.json
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\bin\Release\netstandard2.0\RandomUser.Persistence.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\bin\Release\netstandard2.0\RandomUser.Persistence.pdb
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\bin\Release\netstandard2.0\RandomUser.Domain.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\bin\Release\netstandard2.0\RandomUser.Domain.pdb
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\obj\Release\netstandard2.0\RandomUser.Persistence.csprojAssemblyReference.cache
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\obj\Release\netstandard2.0\RandomUser.Persistence.AssemblyInfoInputs.cache
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\obj\Release\netstandard2.0\RandomUser.Persistence.AssemblyInfo.cs
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\obj\Release\netstandard2.0\RandomUser.Persistence.csproj.CopyComplete
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\obj\Release\netstandard2.0\RandomUser.Persistence.dll
+C:\Users\Unknown\source\repos\RandomUser\RandomUser.Persistence\obj\Release\netstandard2.0\RandomUser.Persistence.pdb

@@ -1,0 +1,66 @@
+
+<app-loading-snipper *ngIf="!userModel"></app-loading-snipper>
+
+<div *ngIf="userModel" class="user-card">
+
+  <div class="container-fluid top-buffer">
+    <h2 id="tableLabel">User Detail</h2>
+
+    <form #userForm="ngForm" novalidate>
+
+      <div class="center-aligned">
+        <img class="user-profile-image" src="data:image/jpg;base64,{{userModel.profileImageData}}" />
+      </div>
+
+      <p class="center-aligned top-buffer">{{userModel.title}} {{userModel.firstName}} {{userModel.lastName}}</p>
+
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput type="text" name="title" placeholder="Title" [(ngModel)]="userModel.title" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" name="firstName" placeholder="First Name" #firstName="ngModel" required [class.is-invalid]="firstName.invalid && firstName.touched" [(ngModel)]="userModel.firstName" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" name="lastName" placeholder="Last Name" #lastName="ngModel" required [class.is-invalid]="lastName.invalid && lastName.touched" [(ngModel)]="userModel.lastName" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Date of Birth</mat-label>
+        <input matInput name="dateOfBirth" placeholder="Date of Birth" #dateOfBirth="ngModel" [matDatepicker]="dobDatepicker" required [class.is-invalid]="dateOfBirth.invalid && dateOfBirth.touched" [(ngModel)]="userModel.dateOfBirth">
+        <mat-datepicker-toggle matSuffix [for]="dobDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #dobDatepicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Phone Number</mat-label>
+        <input matInput type="tel" name="phone" placeholder="Phone Number" #phoneNumber="ngModel" required [class.is-invalid]="phoneNumber.invalid && phoneNumber.touched" [(ngModel)]="userModel.phoneNumber" />
+      </mat-form-field>
+
+      <div class="button-container top-buffer bottom-buffer">
+        <div class="float-left">
+          <button mat-raised-button (click)="gotoBack()">
+            <fa-icon [icon]="faArrowLeft" class="button-icon"></fa-icon>
+            Back
+          </button>
+        </div>
+        <div class="float-right">
+          <button mat-raised-button color="warn" (click)="delete()">
+            <fa-icon [icon]="faTimes" class="button-icon"></fa-icon>
+            Delete
+          </button>
+          <button mat-raised-button color="primary" [disabled]="userForm.form.invalid" (click)="save()">
+            <fa-icon [icon]="faCheck" class="button-icon"></fa-icon>
+            Save
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+  
+</div>
