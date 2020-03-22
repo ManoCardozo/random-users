@@ -110,9 +110,6 @@ namespace RandomUser.Application.Tests.ServiceTests
             // Assert
             uowMock
                 .Verify(m => m.UserRepository.Update(It.IsAny<User>()), Times.Once);
-
-            uowMock
-                .Verify(m => m.Commit(), Times.Once);
         }
 
         [Test]
@@ -129,9 +126,6 @@ namespace RandomUser.Application.Tests.ServiceTests
             // Assert
             uowMock
                 .Verify(m => m.UserRepository.Update(null), Times.Once);
-
-            uowMock
-                .Verify(m => m.Commit(), Times.Never);
         }
 
         [Test]
@@ -147,9 +141,6 @@ namespace RandomUser.Application.Tests.ServiceTests
             // Assert
             uowMock
                 .Verify(m => m.UserRepository.Delete(It.IsAny<User>()), Times.Once);
-
-            uowMock
-                .Verify(m => m.Commit(), Times.Once);
         }
 
         [Test]
@@ -166,9 +157,6 @@ namespace RandomUser.Application.Tests.ServiceTests
             // Assert
             uowMock
                 .Verify(m => m.UserRepository.Delete(null), Times.Once);
-
-            uowMock
-                .Verify(m => m.Commit(), Times.Never);
         }
     }
 }

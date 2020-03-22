@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using RandomUser.Domain.Entities;
 using RandomUser.WebUI.Controllers;
 using RandomUser.Application.Services;
+using RandomUser.Repository.UnitOfWork;
 using RandomUser.Domain.ValueObjects.ListFilter;
 
 namespace RandomUser.WebUI.Tests.ControllerTests
@@ -17,6 +18,7 @@ namespace RandomUser.WebUI.Tests.ControllerTests
     {
         private UserController controller;
         private Mock<IUserService> userServiceMock;
+        private Mock<IUnitOfWork> unitOfWorkMock;
 
         public UserControllerTests()
         {
@@ -27,7 +29,8 @@ namespace RandomUser.WebUI.Tests.ControllerTests
         public void Setup()
         {
             userServiceMock = new Mock<IUserService>();
-            controller = new UserController(userServiceMock.Object);
+            unitOfWorkMock = new Mock<IUnitOfWork>();
+            controller = new UserController(unitOfWorkMock.Object, userServiceMock.Object);
         }
 
         [Test]
@@ -173,6 +176,8 @@ namespace RandomUser.WebUI.Tests.ControllerTests
             var okResult = response as OkResult;
 
             // Assert
+            unitOfWorkMock
+                .Verify(m => m.Commit(), Times.Once);
 
             Assert.IsNotNull(okResult);
             Assert.AreEqual(okResult.StatusCode, 200);
@@ -196,6 +201,9 @@ namespace RandomUser.WebUI.Tests.ControllerTests
             var notFoundResult = response as NotFoundResult;
 
             // Assert
+            unitOfWorkMock
+                .Verify(m => m.Commit(), Times.Never);
+
             Assert.IsNotNull(notFoundResult);
             Assert.AreEqual(notFoundResult.StatusCode, 404);
         }
@@ -214,6 +222,9 @@ namespace RandomUser.WebUI.Tests.ControllerTests
             var okResult = response as OkResult;
 
             // Assert
+            unitOfWorkMock
+                .Verify(m => m.Commit(), Times.Once);
+
             Assert.IsNotNull(okResult);
             Assert.AreEqual(okResult.StatusCode, 200);
         }
@@ -233,6 +244,9 @@ namespace RandomUser.WebUI.Tests.ControllerTests
             var notFoundResult = response as NotFoundResult;
 
             // Assert
+            unitOfWorkMock
+                .Verify(m => m.Commit(), Times.Never);
+
             Assert.IsNotNull(notFoundResult);
             Assert.AreEqual(notFoundResult.StatusCode, 404);
         }

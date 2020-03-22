@@ -44,8 +44,6 @@ namespace RandomUser.Application.Services
             unitOfWork
                 .UserRepository
                 .Update(user);
-
-            unitOfWork.Commit();
         }
 
         public void Delete(User user)
@@ -53,8 +51,6 @@ namespace RandomUser.Application.Services
             unitOfWork
                 .UserRepository
                 .Delete(user);
-
-            unitOfWork.Commit();
         }
     }
 }

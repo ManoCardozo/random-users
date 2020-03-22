@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using RandomUser.Application.Services;
 using RandomUser.Application.Extensions;
 using RandomUser.Domain.ValueObjects.ListFilter;
+using RandomUser.Repository.UnitOfWork;
 
 namespace RandomUser.WebUI.Controllers
 {
@@ -14,10 +15,14 @@ namespace RandomUser.WebUI.Controllers
     [Route("[controller]/[action]")]
     public class UserController : ControllerBase
     {
+        private readonly IUnitOfWork unitOfWork;
         private readonly IUserService userService;
 
-        public UserController(IUserService userService)
+        public UserController(
+            IUnitOfWork unitOfWork,
+            IUserService userService)
         {
+            this.unitOfWork = unitOfWork;
             this.userService = userService;
         }
 
@@ -110,6 +115,7 @@ namespace RandomUser.WebUI.Controllers
             user.PhoneNumber = model.PhoneNumber;
 
             userService.Update(user);
+            unitOfWork.Commit();
 
             return Ok();
         }
@@ -125,6 +131,7 @@ namespace RandomUser.WebUI.Controllers
             }
 
             userService.Delete(user);
+            unitOfWork.Commit();
 
             return Ok();
         }
