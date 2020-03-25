@@ -1,6 +1,12 @@
 # RandomUsers
 Random users app based on randomuser.me.
-Tech stack include .Net Core, Angular, SQL Server
 
+## Demo
 ![](RandomUser.WebUI/wwwroot/RandomUsers.gif)
+
+## Tech stack
+* .Net Core
+* C#
+* Angular
+* SQL Server
 
